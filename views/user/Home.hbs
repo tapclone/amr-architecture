@@ -23,6 +23,7 @@
 </head>
 <body data-rsssl="1"
     class="home page-template-default page page-id-1824 woocommerce-no-js tg_menu_transparent tg_lightbox_black leftalign tg_footer_reveal elementor-default elementor-page elementor-page-1824">
+                    <div id="loader" class="center"></div>
     <div id="perspective" style="">
         <div id="wrapper" class="hasbg transparent">
             {{>userHeader}}
@@ -834,6 +835,17 @@
         };
     </script>
     <script src="js/plugins/frontend.min.js" defer="defer" type="text/javascript"></script>
+    <script>
+        document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+    } else {
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+};
+    </script>
 </body>
 
 </html>

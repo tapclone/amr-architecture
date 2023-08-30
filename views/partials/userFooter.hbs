@@ -130,3 +130,14 @@
             <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1">
             <input type="hidden" id="pp_topbar" name="pp_topbar" value="">
         </div>
+        <script>
+        document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+        document.querySelector("#loader").style.visibility = "visible";
+    } else {
+        document.querySelector("#loader").style.display = "none";
+        document.querySelector("body").style.visibility = "visible";
+    }
+};
+    </script>
