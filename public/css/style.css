@@ -5981,8 +5981,8 @@ body.leftmenu #footer_wrapper {
     text-align: center;
     padding: 10px;
     position: fixed;
-    bottom: 20px;
-    right: 10px;
+    bottom: 5rem;
+    right: 1.5%;
     cursor: pointer;
     transition: color .3s, background-color .3s, opacity .3s;
     -moz-transition: color .3s, background-color .3s, opacity .3s;
@@ -53419,4 +53419,55 @@ padding: 0px 50px 50px 50px;
             100% {
                 transform: rotate(360deg);
             }
+        }
+
+
+        .phone-icon-custom{
+            z-index: 50;
+            padding: 0.2rem;
+            position: fixed;
+            height: 3rem;
+            width: 3rem;
+            bottom:2.5%;
+            left:1.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background: #d40707;
+            cursor: pointer;
+        }
+        .phone-icon-custom a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .phone-icon-custom svg{
+            width: 2rem;
+            fill: #bcc5b9;
+        }
+        .whatsapp-icon-custom{
+            z-index: 50;
+            padding: 0.2rem;
+            position: fixed;
+            height: 3rem;
+            width: 3rem;
+            /* top:1275%;*/
+            bottom:2.5%;
+            right:1.5%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background: #4dc247;
+            cursor: pointer;
+        }
+        .whatsapp-icon-custom a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .whatsapp-icon-custom svg{
+            width: 2rem;
+            fill: white;
         }
