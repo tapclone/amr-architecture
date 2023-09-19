@@ -38012,7 +38012,7 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
         margin-bottom: 30px
     }
     #toTop {
-        bottom: 15px
+        bottom: 5rem;
     }
     #logo_normal.logo_container {
         left: 0
@@ -53444,7 +53444,7 @@ padding: 0px 50px 50px 50px;
         }
         .phone-icon-custom svg{
             width: 2rem;
-            fill: #bcc5b9;
+            fill: white;
         }
         .whatsapp-icon-custom{
             z-index: 50;
