@@ -52019,7 +52019,7 @@ padding: 0px 50px 50px 50px;
         width: 56.667%;
     }
     .elementor-1017 .elementor-element.elementor-element-148ac17 {
-        width: 43.33%;
+        width: 36.33%;
     }
 
 }
@@ -52029,7 +52029,7 @@ padding: 0px 50px 50px 50px;
         padding: 0px 0px 0px 0px;
     }
     .elementor-section .elementor-container{
-        margin: 0 2rem;
+        margin: 1.5rem 2rem;
     }
 }
 @media(max-width:480px){
@@ -53412,7 +53412,6 @@ padding: 0px 50px 50px 50px;
     .elementor-row{
         gap: 1.5rem;
         display: flex;
-        flex-wrap: nowrap;
     }
 }
 
