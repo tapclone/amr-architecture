@@ -198,3 +198,24 @@
   padding-left: 20px !important;
   padding-right: 20px !important;
 }
+
+
+/* Media query for screens with a maximum width of 768px */
+@media screen and (max-width: 768px) {
+  .tab-slider {
+      flex-direction: row; /* Keep buttons horizontal */
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      justify-content: center; /* Center align buttons */
+  }
+  .tablinks {
+      width: auto; /* Let buttons determine their own width */
+      margin: 5px; /* Add spacing between buttons */
+  }
+}
+
+/* Media query for even smaller screens (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+  .tablinks {
+      font-size: 14px; /* Decrease font size for smaller screens */
+  }
+}

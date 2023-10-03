@@ -53353,17 +53353,18 @@ padding: 0px 50px 50px 50px;
 .menu {
     list-style-type: none;
     padding: 0;
+    opacity: 90%;
     margin: 0;
-    height: 85vh;
+    height: 100%;
     display: flex;
     gap: 2.5rem;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     position: fixed;
     top: 0;
     left: -100%; /* Slide out to the left initially */
-    width: 80%; /* Adjust this width as needed */
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%; /* Adjust this width as needed */
+    background-color: #5c7065;
     transition: left 0.3s ease-in-out; /* Change the transition property */
     z-index: 1;
     overflow-y: auto;
@@ -53372,7 +53373,7 @@ padding: 0px 50px 50px 50px;
 .menu li {
     text-align: center;
     padding: 10px;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #bab8b8;
     transform: translateX(-100%); /* Slide out to the left initially */
     transition: transform 0.3s ease-in-out; /* Add a transition for list items */
   }
@@ -53407,7 +53408,9 @@ padding: 0px 50px 50px 50px;
   }
 
   .menu-toggle:checked ~ .menu ~ .close-icon {
+
     display: block; /* Show close icon when checked */
+    z-index: 99;
   }
 
 /* Styles for laptop view */
@@ -53519,3 +53522,5 @@ padding: 0px 50px 50px 50px;
             width: 2rem;
             fill: white;
         }
+
+        
