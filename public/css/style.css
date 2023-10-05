@@ -8096,6 +8096,7 @@ a.button.large {
     left: 0;
     right: 0;
     z-index: 1
+    
 }
 
 .post_img_hover:hover img,
@@ -53434,6 +53435,7 @@ padding: 0px 50px 50px 50px;
         display: none;
     }
 }
+
 .udayipp{
     display: none;
 }
@@ -53522,5 +53524,28 @@ padding: 0px 50px 50px 50px;
             width: 2rem;
             fill: white;
         }
-
+       
+        .swiper-slide-expertise img{
+            height:350px ;
         
+        }
+
+        .swiper-slide-expertise{
+            padding-inline:10px;
+        }
+
+        .swiper-scrollbar-horizontal{
+            display: none;
+          }
+
+          .swiper-button-next:after{
+            color:#fff;
+        }
+
+            .swiper-button-prev:after{
+                color:#fff;
+            }
+
+            .swiper-slide{
+                background-size: cover;
+            }
