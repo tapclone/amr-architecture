@@ -53548,5 +53548,5 @@ padding: 0px 50px 50px 50px;
             }
 
             .swiper-slide{
-                background-size: cover;
+                width:auto !important;
             }
