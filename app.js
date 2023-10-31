@@ -4,7 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs =require('express-handlebars')
-
+var session=require('express-session')
+const connectDB = require("./config/db");
+var indexRouter = require('./routes/index');
 var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
 
@@ -20,6 +22,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+  secret:"key",
+  cookie:{maxAge:1000*60*60},
+  saveUninitialized: true,
+  resave:false
+}))
+
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+  next();
+});
+
+//mongodb connection
+connectDB();
 
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);

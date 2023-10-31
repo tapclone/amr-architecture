@@ -50,6 +50,7 @@
                                                 </div>
                                             </div>
                                         </section>
+                                       {{#each projects}}
                                         <section data-id="c461939" class="elementor-element elementor-element-c461939 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
@@ -59,14 +60,16 @@
                                                                 <div data-id="e77e566" class="elementor-element elementor-element-e77e566 elementor-widget elementor-widget-photographer-gallery-horizontal" data-element_type="photographer-gallery-horizontal.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="tg_horizontal_gallery_wrapper" data-autoplay="0" data-loop="0" data-navigation="1" data-pagination="0" data-parallax="0" data-fullscreen="0">
+                                                                            {{#each this.image}}
                                                                             <div class="tg_horizontal_gallery_cell" style="margin-right:0px">
-                                                                                <img class="tg_horizontal_gallery_cell_img" data-flickity-lazyload="images/projects/abd1.jpg" alt="" style="height:520px;"></div>
-                                                                            <div class="tg_horizontal_gallery_cell" style="margin-right:0px">
+                                                                                <img class="tg_horizontal_gallery_cell_img" data-flickity-lazyload="/uploads/{{this}}" alt="" style="height:520px;"></div>
+                                                                            {{/each}}
+                                                                            {{!-- <div class="tg_horizontal_gallery_cell" style="margin-right:0px">
                                                                                 <img class="tg_horizontal_gallery_cell_img" data-flickity-lazyload="images/projects/abd2.jpg" alt="" style="height:520px;"></div>
                                                                             <div class="tg_horizontal_gallery_cell" style="margin-right:0px">
                                                                                 <img class="tg_horizontal_gallery_cell_img" data-flickity-lazyload="upload/kari-shea-580156-unsplash-683x1024.jpg" alt="" style="height:520px;"></div>
                                                                             <div class="tg_horizontal_gallery_cell" style="margin-right:0px">
-                                                                                <img class="tg_horizontal_gallery_cell_img" data-flickity-lazyload="upload/modern-interior-design-houses-small-cottage-plan-designs-cabin-ranch-house-interior-design-ranch-house-interior-design-boulder-co-1024x679.jpg" alt="" style="height:520px;"></div>
+                                                                                <img class="tg_horizontal_gallery_cell_img" data-flickity-lazyload="upload/modern-interior-design-houses-small-cottage-plan-designs-cabin-ranch-house-interior-design-ranch-house-interior-design-boulder-co-1024x679.jpg" alt="" style="height:520px;"></div> --}}
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -84,7 +87,7 @@
                                                             <div class="elementor-widget-wrap">
                                                                 <div data-id="5c895e8" class="elementor-element elementor-element-5c895e8 elementor-widget elementor-widget-heading" data-element_type="heading.default">
                                                                     <div class="elementor-widget-container">
-                                                                        <h2 class="elementor-heading-title elementor-size-default"><a href="single-portfolio-5.html">Abdul Harif-Ponnani</a></h2></div>
+                                                                        <h2 class="elementor-heading-title elementor-size-default"><a href="single-portfolio-5.html">{{this.name}}</a></h2></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -95,7 +98,7 @@
                                                                 <div data-id="012486b" class="elementor-element elementor-element-012486b elementor-widget elementor-widget-text-editor" data-element_type="text-editor.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="elementor-text-editor elementor-clearfix">
-                                                                            <p class="p1">2018</p>
+                                                                            <p class="p1">{{this.date}}</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -105,6 +108,7 @@
                                                 </div>
                                             </div>
                                         </section>
+                                       {{/each}}
                                         {{!-- <section data-id="02e9ab3" class="elementor-element elementor-element-02e9ab3 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}" data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">

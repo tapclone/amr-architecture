@@ -1,4 +1,5 @@
 var express = require("express");
+const { getOngoing, getCompleted } = require("../controllers/userController");
 var router = express.Router();
 
 /* GET home page. */
@@ -22,9 +23,7 @@ router.get("/services", (req, res) => {
 });
 
 // route to fetch the upcoming and ongoing projects
-router.get('/upcoming-projects',(req,res)=>{
-  res.render('user/ongoing-projects')
-})
+router.get('/upcoming-projects',getOngoing)
 
 
 //get gallery page
@@ -33,7 +32,5 @@ router.get('/gallery',(req,res)=>{
 })
 
 // route to fetch the completed projects
-router.get('/completed-projects',(req,res)=>{
-  res.render('user/completed-projects')
-})
+router.get('/completed-projects',getCompleted)
 module.exports = router;
