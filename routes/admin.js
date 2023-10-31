@@ -21,7 +21,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.route("/").get(verifyAdminLoggedIn, getLogin).post(postLogin);
-
+ 
 router.route("/completed-projects").get(verifyAdminLoggedOut,getHome)
 router.route('/add-completed-project').get(verifyAdminLoggedOut,getAddCompletedProjects).post(upload.array('Image',5),verifyAdminLoggedOut,postCompletedProjects);
 router.route("/deleteCompletedProject/:id").get(verifyAdminLoggedOut,deleteCompletedProject)
