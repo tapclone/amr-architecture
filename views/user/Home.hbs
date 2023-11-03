@@ -34,7 +34,7 @@
     height: 100%;
     /* Background image URL and additional background properties */
     background-image: url('/images/banner.png'); /* Replace 'your-image-url.jpg' with the actual image URL */
-    background-color: #5c7065; /* Fallback background color */
+    background-color: #2b342f; /* Fallback background color */
     background-size: cover;
     /* Adjust as needed to cover the entire element */
     background-repeat: no-repeat; /* Prevent image from repeating */
@@ -67,33 +67,36 @@
 }
 .fullscreen-component p{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 0.7rem;
     padding: 0 0;
       overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid rgb(247, 246, 221); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    margin-top: -1.5%;
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
-    typing 3s steps(30, end),
+    typing 2.5s steps(30, end),
     blink-caret .75s step-end infinite;
 }
 @keyframes typing {
   from { width: 0 }
-  to { width:20% }
+  to { width:9% }
 }
 @media(max-width:480px){
     .fullscreen-component img{
         width: 70%;
     }
     .fullscreen-component p{
+    margin-top: -4%;
+        font-size: 0.7rem;
           animation: 
     typing 3s steps(30, end),
     blink-caret .75s step-end infinite;
     }
     @keyframes typing {
   from { width: 0 }
-  to { width:70% }
+  to { width:35% }
 }
 }
 
@@ -700,7 +703,7 @@
 
 
 <!-- Slider main container -->
-<h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">PROJECTS</h4>
+<h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Projects</h4>
 <div class="swiper swiper-main" style=" width:100%">
     <!-- If we need navigation buttons -->
   <div class="swiper-button-prev"></div>
