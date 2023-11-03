@@ -25,7 +25,7 @@ module.exports={
         try{
             homeSliderModel.find({}).lean().then((projects)=>{
               const slider =projects[0]
-              res.render("user/home",{slider});
+              res.render("user/Home",{slider});
             })
           }catch(err){
             console.log(err);

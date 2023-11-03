@@ -1,5 +1,5 @@
 var express = require("express");
-const { getOngoing, getCompleted, getInteriors, getHomeSlider } = require("../controllers/userController");
+const {  getCompleted, getInteriors, getHomeSlider } = require("../controllers/userController");
 var router = express.Router();
 
 /* GET home page. */
