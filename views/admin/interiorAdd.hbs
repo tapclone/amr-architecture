@@ -26,55 +26,51 @@
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
-                            <div class="page-title-box">
-                                <div class="page-title-right">
-                               <a href="/admin/add-ongoing-project" class="btn btn-success" role="button">Add Project</a>
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Ongoing Projects</h4>
                                 </div>
-                                <h4 class="page-title">Ongoing Projects</h4>
-                            </div>
                             </div>
                         </div>
                         <!-- end page title -->
-                     <div class="row">
-                        {{#each projects}}
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="d-flex justify-content-between">
-                                        <h4 class="header-title">{{this.name}}</h4>
-                                        <a style=" margin-left: 25px;" type="button"
-                                                onclick="sure('{{this._id}}')"><img style="width: 20px;"
-                                                         src="https://cdn-icons-png.flaticon.com/128/1214/1214428.png" alt=""></a>
-                                    </div>
-                                    <p class="text-muted mb-0">{{this.date}}</p>
-                                </div>
-                                <div class="card-body">
-                                    <div id={{this.name}} class="carousel slide carousel-fade"
-                                        data-bs-ride="carousel">
-                                        <div class="carousel-inner">
-                                            {{#each this.image}}
-                                                <div class="carousel-item {{#if @first}}active{{/if}}">
-                                                    <img class="d-block img-fluid" style="height: 100%; width: 100%; object-fit: cover;" src="/uploads/{{this}}" alt="Slide">
-                                                </div>
-                                             {{/each}}
-                                        </div>
-                                        <a class="carousel-control-prev" href="#{{this.name}}" role="button"
-                                            data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#{{this.name}}" role="button"
-                                            data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </a>
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div> <!-- end col -->
-                        {{/each}}
+                       <div class="row">
+        <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <!-- Your card header content here -->
+            </div>
+            <div class="card-body">
+                <form action="/admin/add-interior-project" method="post" data-plugin="dropzone" data-previews-container="#file-previews" data-upload-preview-template="#uploadPreviewTemplate" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">You can add upto 20 images.</label>
+                        {{!-- <input type="text"  class="form-control" id="name" name="name" placeholder="Enter Project name" required> --}}
                     </div>
+                    {{!-- <div class="form-group mt-2">
+                        <label for="date">Date:</label>
+                        <input type="date" class="form-control" id="date" name="date">
+                    </div> --}}
+                    {{!-- <div class="fallback">
+                        <input name="Image" type="file" multiple />
+                    </div> --}}
+                    <input class="form-control mt-2" data-bs-toggle="modal" onchange="readURL(this);" data-bs-target="#exampleModal" type="file" id="id_image"
+                                    name="Image" accept="image/*" multiple required>
+                    {{!-- <div class="dz-message needsclick">
+                        <i class="h1 text-muted ri-upload-cloud-2-line"></i>
+                        <h3>Drop Images here or click to upload.</h3>
+                    </div> --}}
+
+                    <!-- Preview -->
+                    {{!-- <div class="dropzone-previews mt-3" id="file-previews"></div> --}}
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                           </form>
+                        </div>
+            <!-- end card-body -->
+                     </div>
+        <!-- end card-->
+                 </div>
+    <!-- end col-->
+            </div>
+
                         <!-- end row -->
 
                     </div>
@@ -82,6 +78,19 @@
 
                 </div>
                 <!-- content -->
+
+                <!-- Footer Start -->
+                {{!-- <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            {{!-- <div class="col-12 text-center">
+                                <script>document.write(new Date().getFullYear())</script> © Velonic - Theme by <b>Techzaa</b>
+                            </div> --}}
+                        </div>
+                    </div>
+                </footer> --}}
+                <!-- end Footer -->
+
             </div>
 
             <!-- ============================================================== -->
@@ -302,36 +311,7 @@
 
         <!-- Vendor js -->
         <script src="/assets/js/vendor.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script>
-      function sure(catId) {
-        Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonColor: '#3085d6',
-          cancelButtonColor: '#d33',
-          confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            Swal.fire(
-              'Deleted!',
-              'Your file has been deleted.',
-              'success'
-            )
-             $.ajax({
-          url:'/admin/deleteOngoingProject/'+catId,
-          method:'get',
-          success:(response)=>{
-            location.reload();
-          }
-        })
-          }
-        })
-       
-      }
-    </script>
+
         <!-- Dropzone File Upload js -->
         {{!-- <script src="/assets/vendor/dropzone/min/dropzone.min.js"></script> --}}
 

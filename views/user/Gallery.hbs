@@ -23,42 +23,9 @@
                                                                         <div class="swiper-container tg_fullscreen_gallery_wrapper">
                                                                             <div class="tg_fullscreen_gallery" data-effect="fade" data-speed="800">
                                                                                 <div class="swiper-wrapper">
-                                                                                    
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int1.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int2.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int3.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int4.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int5.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int6.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int7.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int8.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int9.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int10.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int11.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int12.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int13.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int14.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int15.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int16.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int17.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int18.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int19.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int20.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int21.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int22.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int23.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int24.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int25.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/interior-updated/int26.jpg);background-size:cover"></div>
-
-
-                                                                                    
-                                                                                    {{!-- <div class="swiper-slide" style="background-image:url(images/projects/img2.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(images/projects/out2.jpg);background-size:cover"></div> --}}
-                                                                                    {{!-- <div class="swiper-slide" style="background-image:url(upload/xModern-Eco-friendly-House-2.jpg.pagespeed.ic_.el4ZtL7FI9.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(upload/modern-wood-house-1.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(upload/Mid-Century-Modern-10.-Matt-Gibson.jpg);background-size:cover"></div>
-                                                                                    <div class="swiper-slide" style="background-image:url(upload/minecraft-wood-and-stone-house-exterior-home-design-houzz-best-architecture-house-excerpt-nice-of-minecraft-wood-and-stone-house.jpg);background-size:cover"></div> --}}
+                                                                                   {{#each interiorProjects.image}}
+                                                                                   <div class="swiper-slide" style="background-image:url(/uploads/{{this}});background-size:cover"></div>
+                                                                                   {{/each}}
                                                                                 </div>
                                                                                 <div class="swiper-button-next swiper-button-white hover"><i class="fa fa-angle-right" style="color:#ffffff"></i></div>
                                                                                 <div class="swiper-button-prev swiper-button-white hover"><i class="fa fa-angle-left" style="color:#ffffff"></i></div>

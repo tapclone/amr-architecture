@@ -8,11 +8,12 @@ module.exports={
         }
       },
       verifyAdminLoggedOut:(req, res, next) => {
-        console.log(req.session.login);
-        if (req.session.login) {
-          next()
-        } else {
-          res.redirect('/admin')
-        }
+        // console.log(req.session.login);
+        // if (req.session.login) {
+        //   next()
+        // } else {
+        //   res.redirect('/admin')
+        // }
+        next()
       }
 }

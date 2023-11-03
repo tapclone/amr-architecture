@@ -1,11 +1,9 @@
 var express = require("express");
-const { getOngoing, getCompleted } = require("../controllers/userController");
+const { getOngoing, getCompleted, getInteriors, getHomeSlider } = require("../controllers/userController");
 var router = express.Router();
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("user/Home");
-});
+router.get("/",getHomeSlider);
 
 // get contact page
 router.get("/contact", (req, res) => {
@@ -22,15 +20,10 @@ router.get("/services", (req, res) => {
   res.render("user/Services");
 });
 
-// route to fetch the upcoming and ongoing projects
-router.get('/upcoming-projects',getOngoing)
-
 
 //get gallery page
-router.get('/gallery',(req,res)=>{
-  res.render('user/Gallery')
-})
+router.get('/gallery',getInteriors)
 
 // route to fetch the completed projects
-router.get('/completed-projects',getCompleted)
+router.get('/projects',getCompleted)
 module.exports = router;

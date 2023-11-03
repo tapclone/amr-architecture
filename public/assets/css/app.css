@@ -15396,9 +15396,7 @@ html[data-bs-theme=dark] #light-dark-mode .ri-moon-line::before {
   .page-title-box .breadcrumb {
     display: none;
   }
-  .page-title-box .page-title-right {
-    display: none;
-  }
+
 }
 @media (max-width: 419px) {
   .page-title-box .breadcrumb {

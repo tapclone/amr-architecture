@@ -8,9 +8,16 @@ const {
   getAddCompletedProjects,
   deleteCompletedProject,
   deleteOngoingProject,
-  getOngoing,
-  getAddOngoingProjects,
-  postOngoingProjects,
+  getInteriors,
+  getAddInteriorProjects,
+  postInteriorProjects,
+  deleteInteriorProject,
+  getHomeSliders,
+  postProjectSlider,
+  AddImagesSlider,
+  deleteSliderImage,
+  deletInteriorProjectOne,
+  postInteriorProjectsadd,
 } = require("../controllers/adminController");
 const {
   verifyAdminLoggedOut,
@@ -22,14 +29,21 @@ var router = express.Router();
 /* GET users listing. */
 router.route("/").get(verifyAdminLoggedIn, getLogin).post(postLogin);
  
-router.route("/completed-projects").get(verifyAdminLoggedOut,getHome)
-router.route('/add-completed-project').get(verifyAdminLoggedOut,getAddCompletedProjects).post(upload.array('Image',5),verifyAdminLoggedOut,postCompletedProjects);
+router.route("/projects").get(verifyAdminLoggedOut,getHome)
+router.route('/add-project').get(verifyAdminLoggedOut,getAddCompletedProjects).post(upload.array('Image',5),verifyAdminLoggedOut,postCompletedProjects);
 router.route("/deleteCompletedProject/:id").get(verifyAdminLoggedOut,deleteCompletedProject)
 
-router.route("/ongoing-projects").get(verifyAdminLoggedOut,getOngoing)
-router.route('/add-ongoing-project').get(verifyAdminLoggedOut,getAddOngoingProjects).post(upload.array('Image',5),verifyAdminLoggedOut,postOngoingProjects);
-router.route("/deleteOngoingProject/:id").get(verifyAdminLoggedOut,deleteOngoingProject)
+router.route('/interiors').get(getInteriors)
+router.route('/add-interior-project-all').post(upload.array('Image',20),verifyAdminLoggedOut,postInteriorProjects);
+router.route('/add-interior-project-add').post(upload.array('Image',20),verifyAdminLoggedOut,postInteriorProjectsadd);
+router.route("/deleteInteriorProject/:id").get(verifyAdminLoggedOut,deleteInteriorProject)
+router.route("/deleteInteriorProjectOne/:id").get(verifyAdminLoggedOut,deletInteriorProjectOne)
 
+router.route('/home-sliders').get(verifyAdminLoggedOut,getHomeSliders)
+router.route('/add-slider-images-replace-all').post(verifyAdminLoggedOut,upload.array('Image',20),postProjectSlider)
+router.route('/add-slider-images-add').post(verifyAdminLoggedOut,upload.array('Image',20),AddImagesSlider)
+
+router.post('/deleteSliderImage',deleteSliderImage)
 
 router
 .route('/logout')
