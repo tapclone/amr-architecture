@@ -23,7 +23,7 @@ module.exports = {
       if (email === adminid) {
         if (password === adminPassword) {
           req.session.login = true;
-          res.redirect("admin/projects");
+          res.redirect("/admin/projects");
         } else {
           res
             .status(200)
