@@ -53552,8 +53552,7 @@ padding: 0px 50px 50px 50px;
             }
 
             @media(max-width:480px){
-                .home-slidder{
-                    width:auto !important;
+                #page_content_wrapper .inner .sidebar_content.full_width img{
                     height: 15rem !important;
                 }
             }
