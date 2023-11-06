@@ -53550,3 +53550,10 @@ padding: 0px 50px 50px 50px;
             .home-slidder{
                 width:auto !important;
             }
+
+            @media(max-width:480px){
+                .home-slidder{
+                    width:auto !important;
+                    height: 15rem !important;
+                }
+            }
