@@ -8,9 +8,9 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    
-    
-    
+
+
+
     <title>Architecturer | Interior Design </title>
 
 
@@ -24,109 +24,151 @@
     <link rel="icon" href="upload/TG-Thumb.png" sizes="192x192">
     <link rel="apple-touch-icon-precomposed" href="upload/TG-Thumb.png">
 
-<style>
-/* Apply styles to the full-screen component */
-.fullscreen-component {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Background image URL and additional background properties */
-    background-image: url('/images/banner.png'); /* Replace 'your-image-url.jpg' with the actual image URL */
-    background-color: #2b342f; /* Fallback background color */
-    background-size: cover;
-    /* Adjust as needed to cover the entire element */
-    background-repeat: no-repeat; /* Prevent image from repeating */
-    color: #fff; /* Change to your desired text color */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(0); /* Start it off the viewport */
-    transition: transform 1s ease-in; /* Only exit animation */
-    z-index: 2;
-}
+    <style>
+        /* Apply styles to the full-screen component */
+        .fullscreen-component {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Background image URL and additional background properties */
+            background-image: url('/images/banner.png');
+            /* Replace 'your-image-url.jpg' with the actual image URL */
+            background-color: #2b342f;
+            /* Fallback background color */
+            background-size: cover;
+            /* Adjust as needed to cover the entire element */
+            background-repeat: no-repeat;
+            /* Prevent image from repeating */
+            color: #fff;
+            /* Change to your desired text color */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(0);
+            /* Start it off the viewport */
+            transition: transform 1s ease-in;
+            /* Only exit animation */
+            z-index: 2;
+        }
 
 
-.fullscreen-component img {
-    width: 20%;
-    animation: slideIn 1s ease-in-out forwards; /* Slide in animation */
-    opacity: 0; /* Initially set the opacity to 0 */
-}
+        .fullscreen-component img {
+            width: 20%;
+            animation: slideIn 1s ease-in-out forwards;
+            /* Slide in animation */
+            opacity: 0;
+            /* Initially set the opacity to 0 */
+        }
 
-@keyframes slideIn {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-.fullscreen-component p{
-    color: #fff;
-    font-size: 0.7rem;
-    padding: 0 0;
-      overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid rgb(247, 246, 221); /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    margin-top: -1.5%;
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 2.5s steps(30, end),
-    blink-caret .75s step-end infinite;
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width:9% }
-}
-@media(max-width:480px){
-    .fullscreen-component img{
-        width: 70%;
-    }
-    .fullscreen-component p{
-    margin-top: -4%;
-        font-size: 0.7rem;
-          animation: 
-    typing 3s steps(30, end),
-    blink-caret .75s step-end infinite;
-    }
-    @keyframes typing {
-  from { width: 0 }
-  to { width:35% }
-}
-}
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: rgb(255, 237, 203); }
-}
-/* Apply styles to the homepage */
-.homepage {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .fullscreen-component p {
 
+            color: #fff;
+            font-size: 0.6rem;
+            display: flex;
+            align-items: center;
+            padding: 0 0;
+            overflow: hidden;
+            /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid rgb(247, 246, 221);
+            /* The typwriter cursor */
+            white-space: nowrap;
+            /* Keeps the content on a single line */
+            margin: 0 auto;
+            /* Gives that scrolling effect as the typing happens */
+            margin-top: -1.5%;
+            padding-left: 4rem;
+            letter-spacing: .15em;
+            /* Adjust as needed */
+            animation:
+                typing 2.5s steps(30, end),
+                blink-caret .75s step-end infinite;
+        }
+         .fullscreen-component p img{
+            width: 15px;
+         }
+        @keyframes typing {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 11%
+            }
+        }
+
+        @media(max-width:480px) {
+            .fullscreen-component img {
+                width: 70%;
+            }
+
+            .fullscreen-component p {
+                margin-top: -4%;
+                font-size: 0.7rem;
+                animation:
+                    typing 3s steps(30, end),
+                    blink-caret .75s step-end infinite;
+            }
+
+            @keyframes typing {
+                from {
+                    width: 0
+                }
+
+                to {
+                    width: 40%
+                }
+            }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: rgb(255, 237, 203);
+            }
+        }
+
+        /* Apply styles to the homepage */
+        .homepage {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
     </style>
 </head>
+
 <body data-rsssl="1"
     class="home page-template-default page page-id-1824 woocommerce-no-js tg_menu_transparent tg_lightbox_black leftalign tg_footer_reveal elementor-default elementor-page elementor-page-1824">
-     <div class="fullscreen-component">
+    <div class="fullscreen-component">
         <img src="/images/whitelogo.png" alt="">
-        <p>VITALISING SPACES</p>
+        <p><img src="/images/dotgroup.png" alt=""> VITALISING SPACES<img src="/images/dotgroup.png" alt=""></p>
     </div>
 
-   {{!-- <div id="loader" class="center"></div> --}}
+    {{!-- <div id="loader" class="center"></div> --}}
     <div id="perspective" style="" class="homepage">
         <div id="wrapper" class="hasbg transparent">
             {{>userHeader}}
             <div id="page_content_wrapper" class="">
                 <div class="inner">
-                <div class="inner_wrapper">
+                    <div class="inner_wrapper">
                         <div class="sidebar_content full_width">
                             <div class="elementor elementor-2006">
                                 <div class="elementor-inner">
@@ -134,7 +176,8 @@
                                         <section data-id="e9ab6c8"
                                             class="elementor-element elementor-element-e9ab6c8 elementor-section-stretched elementor-section-height-min-height elementor-section-content-top elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section"
                                             data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
-                                            style="background-image:url(images/projects/pic1.jpg);" data-element_type="section">
+                                            style="background-image:url(images/projects/pic1.jpg);"
+                                            data-element_type="section">
                                             <div class="elementor-background-overlay"></div>
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
@@ -150,7 +193,9 @@
                                                                     <div class="elementor-widget-container">
                                                                         <h1
                                                                             class="elementor-heading-title elementor-size-default">
-                                                                            <a href="single-portfolio-2.html">LIBA - 2023</a></h1>
+                                                                            <a href="single-portfolio-2.html">LIBA -
+                                                                                2023</a>
+                                                                        </h1>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="7ffb57e"
@@ -173,7 +218,8 @@
                                         <section data-id="e9ab6c8"
                                             class="elementor-element elementor-element-e9ab6c8 elementor-section-stretched elementor-section-height-min-height elementor-section-content-top elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section"
                                             data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
-                                            style="background-image:url(images/projects/pic3.jpg);" data-element_type="section">
+                                            style="background-image:url(images/projects/pic3.jpg);"
+                                            data-element_type="section">
                                             <div class="elementor-background-overlay"></div>
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
@@ -189,7 +235,9 @@
                                                                     <div class="elementor-widget-container">
                                                                         <h1
                                                                             class="elementor-heading-title elementor-size-default">
-                                                                            <a href="single-portfolio-2.html">JAZ HOUSE - 2023</a></h1>
+                                                                            <a href="single-portfolio-2.html">JAZ HOUSE
+                                                                                - 2023</a>
+                                                                        </h1>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="7ffb57e"
@@ -212,7 +260,8 @@
                                         <section data-id="e9ab6c8"
                                             class="elementor-element elementor-element-e9ab6c8 elementor-section-stretched elementor-section-height-min-height elementor-section-content-top elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section"
                                             data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
-                                            style="background-image:url(images/projects/pic4.jpg);" data-element_type="section">
+                                            style="background-image:url(images/projects/pic4.jpg);"
+                                            data-element_type="section">
                                             <div class="elementor-background-overlay"></div>
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
@@ -228,7 +277,9 @@
                                                                     <div class="elementor-widget-container">
                                                                         <h1
                                                                             class="elementor-heading-title elementor-size-default">
-                                                                            <a href="single-portfolio-2.html">2 BHK VILLA - 2023</a></h1>
+                                                                            <a href="single-portfolio-2.html">2 BHK
+                                                                                VILLA - 2023</a>
+                                                                        </h1>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="7ffb57e"
@@ -251,7 +302,8 @@
                                         <section data-id="e9ab6c8"
                                             class="elementor-element elementor-element-e9ab6c8 elementor-section-stretched elementor-section-height-min-height elementor-section-content-top elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section"
                                             data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}"
-                                            style="background-image:url(images/projects/pic2.jpg);" data-element_type="section">
+                                            style="background-image:url(images/projects/pic2.jpg);"
+                                            data-element_type="section">
                                             <div class="elementor-background-overlay"></div>
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
@@ -267,7 +319,9 @@
                                                                     <div class="elementor-widget-container">
                                                                         <h1
                                                                             class="elementor-heading-title elementor-size-default">
-                                                                            <a href="single-portfolio-2.html">SHAAN'S HOUSE - 2022</a></h1>
+                                                                            <a href="single-portfolio-2.html">SHAAN'S
+                                                                                HOUSE - 2022</a>
+                                                                        </h1>
                                                                     </div>
                                                                 </div>
                                                                 <div data-id="7ffb57e"
@@ -325,7 +379,18 @@
                                                                     <div class="elementor-widget-container">
                                                                         <div
                                                                             class="elementor-text-editor elementor-clearfix">
-                                                                            <p><span style="font-size: 16px;">Are you in pursuit of the extraordinary, seeking to transform your vision into reality? Look no further, for you have discovered AMR Constructions - your beacon of innovation and excellence in the realm of construction. Nestled in the heart of Calicut, we are not just builders; we are architects of your dreams and guardians of your aspirations.</span>
+                                                                            <p><span style="font-size: 16px;">Are you in
+                                                                                    pursuit of the extraordinary,
+                                                                                    seeking to transform your vision
+                                                                                    into reality? Look no further, for
+                                                                                    you have discovered AMR
+                                                                                    Constructions - your beacon of
+                                                                                    innovation and excellence in the
+                                                                                    realm of construction. Nestled in
+                                                                                    the heart of Calicut, we are not
+                                                                                    just builders; we are architects of
+                                                                                    your dreams and guardians of your
+                                                                                    aspirations.</span>
                                                                             </p>
                                                                         </div>
                                                                     </div>
@@ -371,8 +436,7 @@
                                                                                             <span
                                                                                                 class="ti-arrow-right"></span>
                                                                                             <div class="curl"></div>
-                                                                                            <a
-                                                                                                href="/projects"></a>
+                                                                                            <a href="/projects"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <br class="clear">
@@ -380,8 +444,9 @@
                                                                                         class="portfolio_classic_content">
                                                                                         <h3
                                                                                             class="portfolio_classic_title">
-                                                                                            <a
-                                                                                                href="/projects">WAYANAD RESTAURANT</a></h3>
+                                                                                            <a href="/projects">WAYANAD
+                                                                                                RESTAURANT</a>
+                                                                                        </h3>
                                                                                         {{!-- <div
                                                                                             class="portfolio_classic_subtitle">
                                                                                             July 2018</div> --}}
@@ -396,8 +461,7 @@
                                                                                             <span
                                                                                                 class="ti-arrow-right"></span>
                                                                                             <div class="curl"></div>
-                                                                                            <a
-                                                                                                href="/projects"></a>
+                                                                                            <a href="/projects"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <br class="clear">
@@ -405,8 +469,9 @@
                                                                                         class="portfolio_classic_content">
                                                                                         <h3
                                                                                             class="portfolio_classic_title">
-                                                                                            <a
-                                                                                                href="/projects">CONVENTION CENTER</a></h3>
+                                                                                            <a href="/projects">CONVENTION
+                                                                                                CENTER</a>
+                                                                                        </h3>
                                                                                         {{!-- <div
                                                                                             class="portfolio_classic_subtitle">
                                                                                             May 2018</div> --}}
@@ -421,8 +486,7 @@
                                                                                             <span
                                                                                                 class="ti-arrow-right"></span>
                                                                                             <div class="curl"></div>
-                                                                                            <a
-                                                                                                href="/projects"></a>
+                                                                                            <a href="/projects"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <br class="clear">
@@ -430,8 +494,9 @@
                                                                                         class="portfolio_classic_content">
                                                                                         <h3
                                                                                             class="portfolio_classic_title">
-                                                                                            <a
-                                                                                                href="/projects">SHEREEF FLAT CALICUT</a></h3>
+                                                                                            <a href="/projects">SHEREEF
+                                                                                                FLAT CALICUT</a>
+                                                                                        </h3>
                                                                                         {{!-- <div
                                                                                             class="portfolio_classic_subtitle">
                                                                                             May 2018</div> --}}
@@ -446,8 +511,7 @@
                                                                                             <span
                                                                                                 class="ti-arrow-right"></span>
                                                                                             <div class="curl"></div>
-                                                                                            <a
-                                                                                                href="/projects"></a>
+                                                                                            <a href="/projects"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <br class="clear">
@@ -455,8 +519,9 @@
                                                                                         class="portfolio_classic_content">
                                                                                         <h3
                                                                                             class="portfolio_classic_title">
-                                                                                            <a
-                                                                                                href="/projects">WAYANAD RESORT 2023</a></h3>
+                                                                                            <a href="/projects">WAYANAD
+                                                                                                RESORT 2023</a>
+                                                                                        </h3>
                                                                                         {{!-- <div
                                                                                             class="portfolio_classic_subtitle">
                                                                                             May 2018</div> --}}
@@ -471,8 +536,7 @@
                                                                                             <span
                                                                                                 class="ti-arrow-right"></span>
                                                                                             <div class="curl"></div>
-                                                                                            <a
-                                                                                                href="/projects"></a>
+                                                                                            <a href="/projects"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <br class="clear">
@@ -480,8 +544,8 @@
                                                                                         class="portfolio_classic_content">
                                                                                         <h3
                                                                                             class="portfolio_classic_title">
-                                                                                            <a
-                                                                                                href="/projects">GOLF STRUCTURE</a>
+                                                                                            <a href="/projects">GOLF
+                                                                                                STRUCTURE</a>
                                                                                         </h3>
                                                                                         {{!-- <div
                                                                                             class="portfolio_classic_subtitle">
@@ -497,8 +561,7 @@
                                                                                             <span
                                                                                                 class="ti-arrow-right"></span>
                                                                                             <div class="curl"></div>
-                                                                                            <a
-                                                                                                href="/projects"></a>
+                                                                                            <a href="/projects"></a>
                                                                                         </div>
                                                                                     </div>
                                                                                     <br class="clear">
@@ -506,8 +569,9 @@
                                                                                         class="portfolio_classic_content">
                                                                                         <h3
                                                                                             class="portfolio_classic_title">
-                                                                                            <a
-                                                                                                href="/projects">NISHIDHA RESIDENTIAL</a></h3>
+                                                                                            <a href="/projects">NISHIDHA
+                                                                                                RESIDENTIAL</a>
+                                                                                        </h3>
                                                                                         {{!-- <div
                                                                                             class="portfolio_classic_subtitle">
                                                                                             August 2017</div> --}}
@@ -665,15 +729,23 @@
                                             </div>
                                         </section> --}}
 
-                                        <section data-id="a7d0dae" class="elementor-element elementor-element-a7d0dae animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}" data-element_type="section">
+                                        <section data-id="a7d0dae"
+                                            class="elementor-element elementor-element-a7d0dae animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section"
+                                            data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}"
+                                            data-element_type="section">
                                             <div class="elementor-container elementor-column-gap-default">
                                                 <div class="elementor-row">
-                                                    <div data-id="2d058b6" class="elementor-element elementor-element-2d058b6 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
+                                                    <div data-id="2d058b6"
+                                                        class="elementor-element elementor-element-2d058b6 elementor-column elementor-col-100 elementor-top-column"
+                                                        data-element_type="column">
                                                         <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class="elementor-widget-wrap">
-                                                                
-                                                                <div data-id="d492ea9" class="elementor-element elementor-element-d492ea9 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}" data-element_type="heading.default">
-                                                                
+
+                                                                <div data-id="d492ea9"
+                                                                    class="elementor-element elementor-element-d492ea9 animated fadeInUp animated-fast elementor-invisible elementor-widget elementor-widget-heading"
+                                                                    data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:200}"
+                                                                    data-element_type="heading.default">
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -682,299 +754,369 @@
                                             </div>
                                         </section>
 
-                    {{!-- <div class="tab-slider" style="display: flex; flex-wrap: wrap; gap:5px;">
-                    <button class="tablinks" onclick="openCity(event, 'Commercial')" id="defaultOpen" style="background-color: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s; margin-left:10px;">Commercial</button>
-                    <button class="tablinks" onclick="openCity(event, 'Residential')" style="background-color: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s;">Residential</button>
-                    <button class="tablinks" onclick="openCity(event, 'Resorts')" style="background-color: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s;">Resorts</button>
-                    </div> --}}
+                                        {{!-- <div class="tab-slider" style="display: flex; flex-wrap: wrap; gap:5px;">
+                                            <button class="tablinks" onclick="openCity(event, 'Commercial')"
+                                                id="defaultOpen"
+                                                style="background-color: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s; margin-left:10px;">Commercial</button>
+                                            <button class="tablinks" onclick="openCity(event, 'Residential')"
+                                                style="background-color: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s;">Residential</button>
+                                            <button class="tablinks" onclick="openCity(event, 'Resorts')"
+                                                style="background-color: #fff; color: #000; border: 1px solid #000; padding: 10px 20px; cursor: pointer; border-radius: 5px; transition: background-color 0.3s;">Resorts</button>
+                                        </div> --}}
 
-    {{!-- <script>
-        document.querySelectorAll(".tablinks").forEach(function(button) {
-        button.addEventListener("mouseover", function() {
-            this.style.backgroundColor = "#181818"; /* Change background color */
-            this.style.color = "#fff"; /* Change text color */
-        });
-        button.addEventListener("mouseout", function() {
-            this.style.backgroundColor = "#fff"; /* Restore background color */
-            this.style.color = "#000"; /* Restore text color */
-        });
-        });
-    </script> --}}
-
-
-<!-- Slider main container -->
-{{!-- <h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Projects</h4>
-<div class="swiper swiper-main" style=" width:100%">
-    <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
-    <!-- Slides -->
-    {{#each slider.projectImage}}
-    <div class="swiper-slide home-slidder swiper-slide-expertise" >
-        <img src="/uploads/{{this}}" alt="">
-    </div>
-    {{/each}}
-  </div>
-<div class="swiper-scrollbar" style="display: none !important;"></div>
-</div> --}}
-<h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Projects</h4>
-<div class="swiper swiper-main" style=" width:100%">
-    <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
-    <!-- Slides -->
-    {{#each slider.projectImage}}
-    <div class="swiper-slide home-slidder swiper-slide-expertise" >
-        <img src="/uploads/{{this}}" alt="">
-    </div>
-    {{/each}}
-  </div>
-<div class="swiper-scrollbar" style="display: none !important;"></div>
-</div>
-
-<!-- Slider main container -->
-<h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Residential</h4>
-<div class="swiper swiper-main" style=" width:100%">
-    <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
-    <!-- Slides -->
-    {{#each slider.residentialImage}}
-    <div class="swiper-slide home-slidder swiper-slide-expertise" >
-        <img src="/uploads/{{this}}" alt="">
-    </div>
-    {{/each}}
-  </div>
-<div class="swiper-scrollbar" style="display: none !important;"></div>
-</div>
-
-<!-- Slider main container -->
-<h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Resorts</h4>
-<div class="swiper swiper-main" style=" width:100%">
-    <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
-    <!-- Slides -->
-    {{#each slider.resortImage}}
-    <div class="swiper-slide home-slidder swiper-slide-expertise" >
-        <img src="/uploads/{{this}}" alt="">
-    </div>
-    {{/each}}
-  </div>
-<div class="swiper-scrollbar" style="display: none !important;"></div>
-</div>
-
-<!-- Slider main container -->
-<h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Commercial</h4>
-<div class="swiper swiper-main" style=" width:100%">
-    <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
-    <!-- Slides -->
-    {{#each slider.commercialImage}}
-    <div class="swiper-slide home-slidder swiper-slide-expertise" >
-        <img src="/uploads/{{this}}" alt="">
-    </div>
-    {{/each}}
-  </div>
-<div class="swiper-scrollbar" style="display: none !important;"></div>
-</div>
+                                        {{!--
+                                        <script>
+                                            document.querySelectorAll(".tablinks").forEach(function (button) {
+                                                button.addEventListener("mouseover", function () {
+                                                    this.style.backgroundColor = "#181818"; /* Change background color */
+                                                    this.style.color = "#fff"; /* Change text color */
+                                                });
+                                                button.addEventListener("mouseout", function () {
+                                                    this.style.backgroundColor = "#fff"; /* Restore background color */
+                                                    this.style.color = "#000"; /* Restore text color */
+                                                });
+                                            });
+                                        </script> --}}
 
 
+                                        <!-- Slider main container -->
+                                        {{!-- <h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Projects
+                                        </h4>
+                                        <div class="swiper swiper-main" style=" width:100%">
+                                            <!-- If we need navigation buttons -->
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
+                                                <!-- Slides -->
+                                                {{#each slider.projectImage}}
+                                                <div class="swiper-slide home-slidder swiper-slide-expertise">
+                                                    <img src="/uploads/{{this}}" alt="">
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <div class="swiper-scrollbar" style="display: none !important;"></div>
+                                        </div> --}}
+                                        <h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Projects</h4>
+                                        <div class="swiper swiper-main" style=" width:100%">
+                                            <!-- If we need navigation buttons -->
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
+                                                <!-- Slides -->
+                                                {{#each slider.projectImage}}
+                                                <div class="swiper-slide home-slidder swiper-slide-expertise">
+                                                    <img src="/uploads/{{this}}" alt="">
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <div class="swiper-scrollbar" style="display: none !important;"></div>
+                                        </div>
 
+                                        <!-- Slider main container -->
+                                        <h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Residential
+                                        </h4>
+                                        <div class="swiper swiper-main" style=" width:100%">
+                                            <!-- If we need navigation buttons -->
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
+                                                <!-- Slides -->
+                                                {{#each slider.residentialImage}}
+                                                <div class="swiper-slide home-slidder swiper-slide-expertise">
+                                                    <img src="/uploads/{{this}}" alt="">
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <div class="swiper-scrollbar" style="display: none !important;"></div>
+                                        </div>
 
+                                        <!-- Slider main container -->
+                                        <h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Resorts</h4>
+                                        <div class="swiper swiper-main" style=" width:100%">
+                                            <!-- If we need navigation buttons -->
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
+                                                <!-- Slides -->
+                                                {{#each slider.resortImage}}
+                                                <div class="swiper-slide home-slidder swiper-slide-expertise">
+                                                    <img src="/uploads/{{this}}" alt="">
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <div class="swiper-scrollbar" style="display: none !important;"></div>
+                                        </div>
 
-
-
-
-
+                                        <!-- Slider main container -->
+                                        <h4 style="margin-left:10px; margin:10px 10px; font-weight:400;">Commercial</h4>
+                                        <div class="swiper swiper-main" style=" width:100%">
+                                            <!-- If we need navigation buttons -->
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper swiper-wrapper-expertise" style="display:flex;">
+                                                <!-- Slides -->
+                                                {{#each slider.commercialImage}}
+                                                <div class="swiper-slide home-slidder swiper-slide-expertise">
+                                                    <img src="/uploads/{{this}}" alt="">
+                                                </div>
+                                                {{/each}}
+                                            </div>
+                                            <div class="swiper-scrollbar" style="display: none !important;"></div>
+                                        </div>
 
 
 
 
 
-{{!-- <div id="Commercial" class="tabcontent" style="background-size: cover;">
- <section data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
-                                            <div class="elementor-container elementor-column-gap-default">
-                                                <div class="elementor-row">
-                                                    <div data-id="27d6030" class="elementor-element elementor-element-27d6030 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div data-id="ef36638" class="elementor-element elementor-element-ef36638 elementor-widget elementor-widget-photographer-blog-posts" data-element_type="photographer-blog-posts.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="blog_post_content_wrapper layout_grid">
-                                                                            <div class="blog-posts-grid post-134 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-exteriors category-interiors tag-home-offices tag-kitchens tag-staircases">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/1c.jpg" class="" alt="">
-                                                                                            <a href="images/1c.jpg"></a>
+
+
+
+
+
+
+
+
+
+                                        {{!-- <div id="Commercial" class="tabcontent" style="background-size: cover;">
+                                            <section data-id="fb4c59e"
+                                                class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section"
+                                                data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}"
+                                                data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div data-id="27d6030"
+                                                            class="elementor-element elementor-element-27d6030 elementor-column elementor-col-100 elementor-top-column"
+                                                            data-element_type="column">
+                                                            <div
+                                                                class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div data-id="ef36638"
+                                                                        class="elementor-element elementor-element-ef36638 elementor-widget elementor-widget-photographer-blog-posts"
+                                                                        data-element_type="photographer-blog-posts.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div
+                                                                                class="blog_post_content_wrapper layout_grid">
+                                                                                <div
+                                                                                    class="blog-posts-grid post-134 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-exteriors category-interiors tag-home-offices tag-kitchens tag-staircases">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/1c.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/1c.jpg"></a>
+                                                                                            </div>
                                                                                         </div>
+
                                                                                     </div>
-                                                                                    
+                                                                                </div>
+                                                                                <div
+                                                                                    class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/01.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/01.jpg"></a>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="blog-posts-grid post-124 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/06.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/1c2.jpg"></a>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/01.jpg" class="" alt="">
-                                                                                            <a href="images/01.jpg"></a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                   
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="blog-posts-grid post-124 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/06.jpg" class="" alt="">
-                                                                                            <a href="images/1c2.jpg"></a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    
-                                                                                </div>
-                                                                            </div>
+                                                                            <br class="clear">
                                                                         </div>
-                                                                        <br class="clear">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </section>
-                                         
-</div> --}}
+                                            </section>
 
-{{!-- <div id="Residential" class="tabcontent" style="background-size: cover;">
-<section data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
-                                            <div class="elementor-container elementor-column-gap-default">
-                                                <div class="elementor-row">
-                                                    <div data-id="27d6030" class="elementor-element elementor-element-27d6030 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div data-id="ef36638" class="elementor-element elementor-element-ef36638 elementor-widget elementor-widget-photographer-blog-posts" data-element_type="photographer-blog-posts.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="blog_post_content_wrapper layout_grid">
-                                                                            <div class="blog-posts-grid post-134 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-exteriors category-interiors tag-home-offices tag-kitchens tag-staircases">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/02.jpg" class="" alt="">
-                                                                                            <a href="images/01.jpg"></a>
+                                        </div> --}}
+
+                                        {{!-- <div id="Residential" class="tabcontent" style="background-size: cover;">
+                                            <section data-id="fb4c59e"
+                                                class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section"
+                                                data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}"
+                                                data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div data-id="27d6030"
+                                                            class="elementor-element elementor-element-27d6030 elementor-column elementor-col-100 elementor-top-column"
+                                                            data-element_type="column">
+                                                            <div
+                                                                class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div data-id="ef36638"
+                                                                        class="elementor-element elementor-element-ef36638 elementor-widget elementor-widget-photographer-blog-posts"
+                                                                        data-element_type="photographer-blog-posts.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div
+                                                                                class="blog_post_content_wrapper layout_grid">
+                                                                                <div
+                                                                                    class="blog-posts-grid post-134 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-exteriors category-interiors tag-home-offices tag-kitchens tag-staircases">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/02.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/01.jpg"></a>
+                                                                                            </div>
                                                                                         </div>
+
                                                                                     </div>
-                                                                                    
+                                                                                </div>
+                                                                                <div
+                                                                                    class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/06.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/02.jpg"></a>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="blog-posts-grid post-124 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/05.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/3c2.jpg"></a>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/06.jpg" class="" alt="">
-                                                                                            <a href="images/02.jpg"></a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="blog-posts-grid post-124 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/05.jpg" class="" alt="">
-                                                                                            <a href="images/3c2.jpg"></a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    
-                                                                                </div>
-                                                                            </div>
+                                                                            <br class="clear">
                                                                         </div>
-                                                                        <br class="clear">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </section>
-                                       
-</div> --}}
+                                            </section>
+
+                                        </div> --}}
 
 
-{{!-- <div id="Resorts" class="tabcontent">
-<section data-id="fb4c59e" class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}" data-element_type="section">
-                                            <div class="elementor-container elementor-column-gap-default">
-                                                <div class="elementor-row">
-                                                    <div data-id="27d6030" class="elementor-element elementor-element-27d6030 elementor-column elementor-col-100 elementor-top-column" data-element_type="column">
-                                                        <div class="elementor-column-wrap elementor-element-populated">
-                                                            <div class="elementor-widget-wrap">
-                                                                <div data-id="ef36638" class="elementor-element elementor-element-ef36638 elementor-widget elementor-widget-photographer-blog-posts" data-element_type="photographer-blog-posts.default">
-                                                                    <div class="elementor-widget-container">
-                                                                        <div class="blog_post_content_wrapper layout_grid">
-                                                                            <div class="blog-posts-grid post-134 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-exteriors category-interiors tag-home-offices tag-kitchens tag-staircases">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/01.jpg" class="" alt="">
-                                                                                            <a href="images/05.jpg"></a>
+                                        {{!-- <div id="Resorts" class="tabcontent">
+                                            <section data-id="fb4c59e"
+                                                class="elementor-element elementor-element-fb4c59e animated fadeInUp animated-fast elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-invisible elementor-section elementor-top-section"
+                                                data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}"
+                                                data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div data-id="27d6030"
+                                                            class="elementor-element elementor-element-27d6030 elementor-column elementor-col-100 elementor-top-column"
+                                                            data-element_type="column">
+                                                            <div
+                                                                class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div data-id="ef36638"
+                                                                        class="elementor-element elementor-element-ef36638 elementor-widget elementor-widget-photographer-blog-posts"
+                                                                        data-element_type="photographer-blog-posts.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div
+                                                                                class="blog_post_content_wrapper layout_grid">
+                                                                                <div
+                                                                                    class="blog-posts-grid post-134 post type-post status-publish format-standard has-post-thumbnail hentry category-architecture category-exteriors category-interiors tag-home-offices tag-kitchens tag-staircases">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/01.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/05.jpg"></a>
+                                                                                            </div>
                                                                                         </div>
+
                                                                                     </div>
-                                                                                   
+                                                                                </div>
+                                                                                <div
+                                                                                    class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/03.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/06.jpg"></a>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="blog-posts-grid post-124 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
+                                                                                    <div class="post_wrapper">
+                                                                                        <div class="post_img static">
+                                                                                            <div
+                                                                                                class="post_img_hover ">
+                                                                                                <img src="images/4c.jpg"
+                                                                                                    class="" alt="">
+                                                                                                <a
+                                                                                                    href="images/4c.jpg"></a>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="blog-posts-grid post-129 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/03.jpg" class="" alt="">
-                                                                                            <a href="images/06.jpg"></a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="blog-posts-grid post-124 post type-post status-publish format-standard has-post-thumbnail hentry category-ceilings category-flooring category-landscape tag-libraries tag-living-rooms tag-patios">
-                                                                                <div class="post_wrapper">
-                                                                                    <div class="post_img static">
-                                                                                        <div class="post_img_hover ">
-                                                                                            <img src="images/4c.jpg" class="" alt="">
-                                                                                            <a href="images/4c.jpg"></a>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                   
-                                                                                </div>
-                                                                            </div>
+                                                                            <br class="clear">
                                                                         </div>
-                                                                        <br class="clear">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </section>
-                                       
-</div> --}}
+                                            </section>
+
+                                        </div> --}}
 
                                     </div>
 
-                                        
+
 
 
                                 </div>
@@ -1039,16 +1181,18 @@
                                                         class="elementor-element elementor-element-e4e73b4 elementor-widget elementor-widget-text-editor"
                                                         data-element_type="text-editor.default">
                                                         <div class="elementor-widget-container">
-                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                    <p>AMR ARCHITECTURALS,
-                                                                        <br>CASTLE ARCADE,
-                                                                       1st FLOOR,
-                                                                        <br>CHEMBAKA COLONY,
-                                                                        <br>CHALAPURAM,
-                                                                        CALICUT-02
-                                                                        <br><a href="mailto:amrconstructions07@gmail.com">amrconstructions07@gmail.com</a>
-                                                                        <br>+91-9895233323</p>
-                                                                </div>
+                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                <p>AMR ARCHITECTURALS,
+                                                                    <br>CASTLE ARCADE,
+                                                                    1st FLOOR,
+                                                                    <br>CHEMBAKA COLONY,
+                                                                    <br>CHALAPURAM,
+                                                                    CALICUT-02
+                                                                    <br><a
+                                                                        href="mailto:amrconstructions07@gmail.com">amrconstructions07@gmail.com</a>
+                                                                    <br>+91-9895233323
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1072,8 +1216,9 @@
                                                         data-element_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                               <p>Monday — Saturday 9:30am – 5:30pm
-                                                                        <br>Sunday — Closed</p>
+                                                                <p>Monday — Saturday 9:30am – 5:30pm
+                                                                    <br>Sunday — Closed
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1098,10 +1243,13 @@
                                                         data-element_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                               <p><a target="_blank" href="https://www.facebook.com/RashidaThufail?mibextid=ZbWKw">Facebook</a>
-                                                                        <br><a target="_blank" href="https://instagram.com/amr_constructions?igshid=MzRlODBiNWFlZA==">Instagram</a>
-                                                                        <br><a href="https://pin.it/7arfczy">Pinterest</a>
-                                                                        <br><a href="#">LinkedIn</a></p>
+                                                                <p><a target="_blank"
+                                                                        href="https://www.facebook.com/RashidaThufail?mibextid=ZbWKw">Facebook</a>
+                                                                    <br><a target="_blank"
+                                                                        href="https://instagram.com/amr_constructions?igshid=MzRlODBiNWFlZA==">Instagram</a>
+                                                                    <br><a href="https://pin.it/7arfczy">Pinterest</a>
+                                                                    <br><a href="#">LinkedIn</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1126,7 +1274,8 @@
                                                         data-element_type="text-editor.default">
                                                         <div class="elementor-widget-container">
                                                             <div class="elementor-text-editor elementor-clearfix">
-                                                                <p>“Breathe new life into your abode with our renovation and remodeling prowess.”</p>
+                                                                <p>“Breathe new life into your abode with our renovation
+                                                                    and remodeling prowess.”</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1140,28 +1289,28 @@
                     </div>
                 </div>
             </div>
-             <div class="footer_bar   ">
-                    <div class="footer_bar_wrapper ">
-                        {{!-- <div class="menu-main-menu-container">
-                            <ul id="footer_menu" class="footer_nav">
-                                <li class="menu-item"><a href="index.html.html">Home</a></li>
-                                <li class="menu-item"><a href="vertical-parallax-slider.html">Slider</a></li>
-                                <li class="menu-item"><a href="portfolio-list.html">Portfolio</a></li>
-                                <li class="menu-item"><a href="about-us-1.html">Pages</a></li>
-                                <li class="menu-item"><a href="gallery-fullscreen.html">Gallery</a></li>
-                                <li class="menu-item"><a href="blog-grid.html">Blog</a></li>
-                            </ul>
-                        </div> --}}
-                        <div id="copyright">© Crafted By Tapclone</div>
-                        <div id="copyright">© Copyright AMR Architecturals</div>
-                        <br class="clear">
-                    </div>
+            <div class="footer_bar   ">
+                <div class="footer_bar_wrapper ">
+                    {{!-- <div class="menu-main-menu-container">
+                        <ul id="footer_menu" class="footer_nav">
+                            <li class="menu-item"><a href="index.html.html">Home</a></li>
+                            <li class="menu-item"><a href="vertical-parallax-slider.html">Slider</a></li>
+                            <li class="menu-item"><a href="portfolio-list.html">Portfolio</a></li>
+                            <li class="menu-item"><a href="about-us-1.html">Pages</a></li>
+                            <li class="menu-item"><a href="gallery-fullscreen.html">Gallery</a></li>
+                            <li class="menu-item"><a href="blog-grid.html">Blog</a></li>
+                        </ul>
+                    </div> --}}
+                    <div id="copyright">© Crafted By Tapclone</div>
+                    <div id="copyright">© Copyright AMR Architecturals</div>
+                    <br class="clear">
                 </div>
-            </div><a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
-            <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1">
-            <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1">
-            <input type="hidden" id="pp_topbar" name="pp_topbar" value="">
-        </div>
+            </div>
+        </div><a id="toTop" href="javascript:;"><i class="fa fa-angle-up"></i></a>
+        <input type="hidden" id="pp_fixed_menu" name="pp_fixed_menu" value="1">
+        <input type="hidden" id="tg_sidebar_sticky" name="tg_sidebar_sticky" value="1">
+        <input type="hidden" id="pp_topbar" name="pp_topbar" value="">
+    </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/plugins/jquery.js" defer="defer" type="text/javascript"></script>
     <script src="js/plugins/jquery-migrate.min.js" defer="defer" type="text/javascript"></script>
@@ -1195,9 +1344,11 @@
     <script src="js/plugins/hover.js" defer="defer" type="text/javascript"></script>
     <script src="js/plugins/anime.min.js" defer="defer" type="text/javascript"></script>
     <script src="js/plugins/slideshow.js"></script>
-    {{!-- <script src="js/plugins/flickity.pkgd.js" defer="defer" type="text/javascript"></script> --}}
+    {{!--
+    <script src="js/plugins/flickity.pkgd.js" defer="defer" type="text/javascript"></script> --}}
 
-     {{!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> --}}
+    {{!--
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> --}}
     <script type="text/javascript">
         var tgAjax = {
             "ajaxurl":
@@ -1234,111 +1385,112 @@
     </script>
     <script src="js/plugins/frontend.min.js" defer="defer" type="text/javascript"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    // Get references to the components
-    const fullscreenComponent = document.querySelector(".fullscreen-component");
-    const homepage = document.querySelector(".homepage");
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get references to the components
+            const fullscreenComponent = document.querySelector(".fullscreen-component");
+            const homepage = document.querySelector(".homepage");
 
-    // Hide the homepage initially
-    homepage.style.opacity = "0";
+            // Hide the homepage initially
+            homepage.style.opacity = "0";
 
-    
-    // Show the full-screen component immediately
-    fullscreenComponent.style.transform = "translateY(0)";
 
-    // Slide the full-screen component upwards and simultaneously fade in the homepage
-    setTimeout(function () {
-        fullscreenComponent.style.transform = "translateY(-100%)";
-        homepage.style.opacity = "1";
-    }, 3300); // Adjust the delay as needed for the full-screen display
-});
+            // Show the full-screen component immediately
+            fullscreenComponent.style.transform = "translateY(0)";
+
+            // Slide the full-screen component upwards and simultaneously fade in the homepage
+            setTimeout(function () {
+                fullscreenComponent.style.transform = "translateY(-100%)";
+                homepage.style.opacity = "1";
+            }, 3300); // Adjust the delay as needed for the full-screen display
+        });
 
     </script>
-    
-<script>
-    const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
- speed: 700,
-        // Set 2 slides per view on mobile devices
-        rewind: true,
-        // Add breakpoints for different screen sizes
-        breakpoints: {
-            // When window width is >= 768px (tablet and above), display 3 slides per view
-            768: {
-                slidesPerView: 3
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            speed: 700,
+            // Set 2 slides per view on mobile devices
+            rewind: true,
+            // Add breakpoints for different screen sizes
+            breakpoints: {
+                // When window width is >= 768px (tablet and above), display 3 slides per view
+                768: {
+                    slidesPerView: 3
+                },
+                // When window width is >= 1024px (desktop), display 4 slides per view
+                1024: {
+                    slidesPerView: 5
+                }
             },
-            // When window width is >= 1024px (desktop), display 4 slides per view
-            1024: {
-                slidesPerView: 5
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
             }
-        },
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    </script>
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
-</script>
+    {{!--
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
 
-  
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+            // Deactivate all tab links
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
 
-</script>
+            // Show the clicked tab content and activate the clicked tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
 
-{{!-- <script>
-    function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
+        // Show the default tab on page load (e.g., Tab 1)
+        document.getElementById("Tab1").style.display = "block";
 
-    // Hide all tab content
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
-    // Deactivate all tab links
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the clicked tab content and activate the clicked tab
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
-// Show the default tab on page load (e.g., Tab 1)
-document.getElementById("Tab1").style.display = "block";
-
-</script> --}}
+    </script> --}}
 </body>
 
 </html>
