@@ -11,13 +11,14 @@ module.exports={
     },
     getCompleted:(req,res)=>{
         completedModel.find({}).lean().then((projects)=>{
-            res.render("user/completed-projects",{projects});
+          projects.reverse()
+          res.render("user/completed-projects",{projects});
           })
     },
     getInteriors:(req,res)=>{
         interiorModel.find({}).lean().then((projects)=>{
-            const interiorProjects=projects[0]
-            console.log(interiorProjects);
+          const interiorProjects=projects[0]
+            interiorProjects.image.reverse()
             res.render("user/Gallery",{interiorProjects});
           })
     },
@@ -25,6 +26,10 @@ module.exports={
         try{
             homeSliderModel.find({}).lean().then((projects)=>{
               const slider =projects[0]
+              slider.projectImage.reverse()
+              slider.residentialImage.reverse()
+              slider.resortImage.reverse()
+              slider.commercialImage.reverse()
               res.render("user/Home",{slider});
             })
           }catch(err){

@@ -42,6 +42,7 @@ module.exports = {
   },
   getHome: (req, res) => {
     completedModel.find({}).lean().then((projects)=>{
+      projects.reverse()
       res.render("admin/CompletedProjects",{projects});
     })
   },
@@ -95,6 +96,7 @@ module.exports = {
   },
   getInteriors:(req,res)=>{
     interiorModel.find({}).lean().then((projects)=>{
+      projects[0].image.reverse()
       res.render("admin/interior",{projects});
     })
   },
@@ -169,6 +171,10 @@ module.exports = {
   try{
     homeSliderModel.find({}).lean().then((projects)=>{
       const slider =projects[0]
+      slider.projectImage.reverse()
+      slider.residentialImage.reverse()
+      slider.resortImage.reverse()
+      slider.commercialImage.reverse()
       res.render("admin/HomeSliders",{slider});
     })
   }catch(err){
