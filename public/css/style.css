@@ -37017,6 +37017,7 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
         1
     }
     .elementor-element .elementor-column {
+        overflow: hidden;
         padding: 20px !important;
         1014
     }
