@@ -37018,8 +37018,15 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
     }
     .elementor-element .elementor-column {
         overflow: hidden;
-        padding: 20px !important;
+        padding: 3px !important;
         1014
+    }
+    .elementor-1017 .elementor-element.elementor-element-8a1cbd5 .elementor-heading-title {
+        font-size: 30px !important;
+        font-weight: 400;
+    }
+    .elementor-column-gap-wider>.elementor-row>.elementor-column>.elementor-element-populated {
+        padding: 12px !important;
     }
     .elementor-element.elementor-section-stretched .elementor-col-100,
     .elementor-element.elementor-section-stretched .elementor-column-gap-default>.elementor-row>.elementor-column.elementor-col-100>.elementor-element-populated {
@@ -53553,6 +53560,7 @@ padding: 0px 50px 50px 50px;
             }
 
             @media(max-width:480px){
+               
                 #page_content_wrapper .inner .sidebar_content.full_width img{
                     object-fit: contain;
                     height: 7rem !important;
