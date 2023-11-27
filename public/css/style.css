@@ -53554,6 +53554,7 @@ padding: 0px 50px 50px 50px;
 
             @media(max-width:480px){
                 #page_content_wrapper .inner .sidebar_content.full_width img{
+                    object-fit: contain;
                     height: 15rem !important;
                 }
             }
