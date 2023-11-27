@@ -51968,8 +51968,8 @@ padding: 0px 50px 50px 50px;
 }
 
 .elementor-1017 .elementor-element.elementor-element-955a027 {
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 0px;
+    margin-bottom: 25px;
 }
 
 .elementor-1017 .elementor-element.elementor-element-bba0919 {
@@ -53445,7 +53445,7 @@ padding: 0px 50px 50px 50px;
         display: block;
     }
     .elementor-row{
-        gap: 1.5rem;
+        gap: 0;
         display: flex;
     }
 }
@@ -53555,6 +53555,6 @@ padding: 0px 50px 50px 50px;
             @media(max-width:480px){
                 #page_content_wrapper .inner .sidebar_content.full_width img{
                     object-fit: contain;
-                    height: 15rem !important;
+                    height: 7rem !important;
                 }
             }
