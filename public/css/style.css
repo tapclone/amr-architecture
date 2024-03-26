@@ -36895,8 +36895,12 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
     .portfolio_grid_content_wrapper.has_no_space .tg_three_cols,
     .portfolio_grid_content_wrapper.has_no_space .tg_four_cols,
     .portfolio_grid_content_wrapper.has_no_space .tg_five_cols {
+        display: flex;
         width: 100%;
-        margin-right: 0
+        margin-right: 0;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     body.elementor-fullscreen.photographer-gallery-preview,
     body.elementor-fullscreen.photographer-gallery-preview #wrapper {
@@ -37017,8 +37021,16 @@ body.is-animated .tg_animated_slider_wrapper .slider-more-button {
         1
     }
     .elementor-element .elementor-column {
-        padding: 20px !important;
+        overflow: hidden;
+        padding: 3px !important;
         1014
+    }
+    .elementor-1017 .elementor-element.elementor-element-8a1cbd5 .elementor-heading-title {
+        font-size: 30px !important;
+        font-weight: 400;
+    }
+    .elementor-column-gap-wider>.elementor-row>.elementor-column>.elementor-element-populated {
+        padding: 12px !important;
     }
     .elementor-element.elementor-section-stretched .elementor-col-100,
     .elementor-element.elementor-section-stretched .elementor-column-gap-default>.elementor-row>.elementor-column.elementor-col-100>.elementor-element-populated {
@@ -42010,6 +42022,7 @@ h6.subtitle,
 
 .elementor-2006 .elementor-element.elementor-element-c251703.elementor-widget-heading .elementor-heading-title {
     color: #ffffff;
+    height: 55px;
 }
 
 .elementor-2006 .elementor-element.elementor-element-c251703 .elementor-heading-title {
@@ -51967,8 +51980,8 @@ padding: 0px 50px 50px 50px;
 }
 
 .elementor-1017 .elementor-element.elementor-element-955a027 {
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 0px;
+    margin-bottom: 25px;
 }
 
 .elementor-1017 .elementor-element.elementor-element-bba0919 {
@@ -53444,7 +53457,7 @@ padding: 0px 50px 50px 50px;
         display: block;
     }
     .elementor-row{
-        gap: 1.5rem;
+        gap: 0;
         display: flex;
     }
 }
@@ -53552,7 +53565,9 @@ padding: 0px 50px 50px 50px;
             }
 
             @media(max-width:480px){
+               
                 #page_content_wrapper .inner .sidebar_content.full_width img{
-                    height: 15rem !important;
+                    object-fit: contain;
+                    height: 12rem !important;
                 }
             }
