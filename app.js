@@ -7,7 +7,6 @@ var hbs =require('express-handlebars')
 var session=require('express-session')
 const connectDB = require("./config/db");
 var indexRouter = require('./routes/index');
-var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/admin');
 
 var app = express();
